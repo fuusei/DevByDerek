@@ -1,30 +1,33 @@
-import './globals.css'
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import Providers from "./providers";
-import Head from "next/head";
+import "./globals.css";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import { Providers } from "./providers";
+import { Navbar } from "./components/Navbar";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Derek Mackey',
-  description: 'Personal Portfolio',
-}
+  title: "Derek Mackey",
+  description: "Personal Portfolio",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html suppressHydrationWarning dir="ltr" lang="en">
+      <head />
       <body className={inter.className}>
-        <Providers>
-          <header></header>
-          <main>{children}</main>
-          <footer className="bottom-0 text-center text-sm ">
-            <span>Made by Derek Mackey.</span>
-          </footer>
+        <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
+          <div className="relative flex flex-col" id="app-container">
+            <Navbar />
+            <main>{children}</main>
+            <footer className="bottom-0 text-center text-sm ">
+              <span>Made by Derek Mackey.</span>
+            </footer>
+          </div>
         </Providers>
       </body>
     </html>
