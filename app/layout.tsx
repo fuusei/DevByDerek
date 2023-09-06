@@ -29,7 +29,7 @@ export default function RootLayout({
             <Navbar />
             <main>{children}</main>
             <footer className="bottom-0 text-center text-sm ">
-              <span>Made by Derek Mackey.</span>
+              <span>Created by Derek Mackey.</span>
             </footer>
           </div>
         </Providers>

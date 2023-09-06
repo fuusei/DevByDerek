@@ -1,8 +1,9 @@
 "use client";
 import { useTheme } from "next-themes";
-import { useState } from "react";
+import { useIsSSR } from "react-aria";
 import { BsSunFill, BsFillMoonFill } from "react-icons/bs";
 import { Button } from "@nextui-org/react";
+import { CircularProgress } from "@nextui-org/react";
 
 interface Icons {
   [key: string]: React.ReactNode;
@@ -10,26 +11,24 @@ interface Icons {
 
 export function ThemeSwitcher() {
   const { theme, setTheme } = useTheme();
-  const [currentTheme, setCurrentTheme] = useState("dark");
+  let icons: Icons = { light: <BsFillMoonFill />, dark: <BsSunFill /> };
+  let ThemeIcon = icons[theme || "dark"];
+  const isSSR = useIsSSR();
 
   const handleThemeSwitch = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
-    setCurrentTheme(newTheme);
+    ThemeIcon = icons[newTheme];
   };
-
-  const icons: Icons = { light: <BsFillMoonFill />, dark: <BsSunFill /> };
-  const ThemeIcon = icons[currentTheme];
 
   return (
     <div>
       <Button
         isIconOnly
-        onClick={handleThemeSwitch}
-        variant="bordered"
-        className="overflow-visible rounded-full hover:text-content2 hover:-translate-y-1 shadow-xl after:content-[''] after:absolute after:rounded-full after:inset-0  after:z-[-1] after:transition after:!duration-500 hover:after:scale-150 hover:after:opacity-0"
+        onPress={handleThemeSwitch}
+        className="bg-content1 rounded-full hover:text-content2 hover:-translate-y-1"
       >
-        {ThemeIcon}
+        {isSSR ? <BsSunFill /> : ThemeIcon}
       </Button>
     </div>
   );

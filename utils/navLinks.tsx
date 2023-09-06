@@ -16,8 +16,4 @@ export const navLinks: NavLink[] = [
     name: "Experience",
     path: "/#experience",
   },
-  {
-    name: "Projects",
-    path: "/#projects",
-  },
 ];

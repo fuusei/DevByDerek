@@ -29,21 +29,31 @@ export function About() {
           </p>
         </div>
         {/* skills container */}
-        <div className="flex-1 flex-col lg:pl-6 pl-0 text-center lg:text-left ">
+        <div className="flex-1 flex-col lg:pl-6 pl-0 text-center lg:text-left">
           <h1 className="font-bold pb-8 lg:text-5xl text-3xl underline decoration-solid decoration-2 underline-offset-8">
             Skills
           </h1>
           <div className="flex flex-col">
             {skills.map((skill, i) => (
-              <div key={i}>
-                <h1>{skill.category}</h1>
-                <div className="flex flex-row">
+              <div key={i} className="pb-6">
+                <h1 className="font-semibold text-2xl pb-3 flex justfy-start">
+                  {skill.category}
+                </h1>
+                <div className="flex flex-wrap">
                   {skill.technologies.map((tech) => (
-                    <div className="flex flex-row m-8 bg-slate-800">
-                      {tech.name}
-                      {/* {tech.icon && (
-                        <img src={tech.icon} width={30} height={30}></img>
-                      )} */}
+                    <div
+                      key={tech.name}
+                      className="flex flex-row px-4 py-2 rounded-lg m-2 bg-content1 whitespace-nowrap hover:origin-top-left hover:rotate-1"
+                    >
+                      <h1>{tech.name}</h1>
+                      {tech.icon ? (
+                        <img
+                          src={tech.icon}
+                          width={20}
+                          height={20}
+                          className="ml-2"
+                        ></img>
+                      ) : null}
                     </div>
                   ))}
                 </div>
