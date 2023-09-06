@@ -23,7 +23,12 @@ export function ThemeSwitcher() {
 
   return (
     <div>
-      <Button isIconOnly onClick={handleThemeSwitch}>
+      <Button
+        isIconOnly
+        onClick={handleThemeSwitch}
+        variant="bordered"
+        className="overflow-visible rounded-full hover:text-content2 hover:-translate-y-1 shadow-xl after:content-[''] after:absolute after:rounded-full after:inset-0  after:z-[-1] after:transition after:!duration-500 hover:after:scale-150 hover:after:opacity-0"
+      >
         {ThemeIcon}
       </Button>
     </div>

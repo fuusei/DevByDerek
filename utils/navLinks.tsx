@@ -5,6 +5,10 @@ export interface NavLink {
 
 export const navLinks: NavLink[] = [
   {
+    name: "Home",
+    path: "/#landing",
+  },
+  {
     name: "About",
     path: "/#about",
   },
