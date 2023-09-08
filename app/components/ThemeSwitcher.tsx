@@ -3,7 +3,7 @@ import { useTheme } from "next-themes";
 import { useIsSSR } from "react-aria";
 import { BsSunFill, BsFillMoonFill } from "react-icons/bs";
 import { Button } from "@nextui-org/react";
-import { CircularProgress } from "@nextui-org/react";
+import { Spinner } from "@nextui-org/react";
 
 interface Icons {
   [key: string]: React.ReactNode;
@@ -23,13 +23,17 @@ export function ThemeSwitcher() {
 
   return (
     <div>
-      <Button
-        isIconOnly
-        onPress={handleThemeSwitch}
-        className="bg-content1 rounded-full hover:text-content2 hover:-translate-y-1"
-      >
-        {isSSR ? <BsSunFill /> : ThemeIcon}
-      </Button>
+      {isSSR ? (
+        <Spinner />
+      ) : (
+        <Button
+          isIconOnly
+          onPress={handleThemeSwitch}
+          className="bg-content1 rounded-full hover:text-content2 hover:-translate-y-1"
+        >
+          {ThemeIcon}
+        </Button>
+      )}
     </div>
   );
 }

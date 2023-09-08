@@ -8,7 +8,7 @@ export function Socials() {
     <div className="fixed inset-y-[75%] lg:ml-6 ml-2">
       {socialLinks.map((link, i) => (
         <div
-          className="py-1 hover:-translate-y-1 hover:scale-125 fill-black"
+          className="py-1 hover:-translate-y-1 hover:scale-125"
           key={i}
         >
           <Tooltip content={link.name} placement="right" closeDelay={1000}>

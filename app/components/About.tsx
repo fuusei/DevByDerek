@@ -1,6 +1,7 @@
 import { skills } from "@/utils/skillsList";
 
 export function About() {
+  const proficientTech = ["TypeScript", "JavaScript", "React", "MongoDB", "Next.js"];
   return (
     <section
       id="about"
@@ -14,10 +15,8 @@ export function About() {
             About
           </h1>
           <p className="pb-8 lg:text-xl md:text-lg">
-            Lorem ipsum dolor sit amet. Non quae consequatur aut distinctio
-            minima est sunt architecto vel repellendus omnis qui nobis quisquam!
-            In galisum fugiat quo saepe animi rem nesciunt iure qui adipisci
-            iste.
+            I am a full-stack developer that has mostly worked with MERN
+            stack in my development career. 
           </p>
           <p className="lg:text-xl md:text-lg">
             Et quia nihil est autem autem et ducimus impedit in necessitatibus
@@ -29,7 +28,7 @@ export function About() {
           </p>
         </div>
         {/* skills container */}
-        <div className="flex-1 flex-col lg:pl-6 pl-0 text-center lg:text-left">
+        <div className="flex-1 flex-col lg:pl-6 pl-0 lg:text-left">
           <h1 className="font-bold pb-8 lg:text-5xl text-3xl underline decoration-solid decoration-2 underline-offset-8">
             Skills
           </h1>

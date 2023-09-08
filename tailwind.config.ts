@@ -35,7 +35,7 @@ const config: Config = {
             content1: "#ced1d3", // socials tooltip color
             content2: "#abb5b5", // theme switcher hover color
             content3: "#abb5b5",
-            content4: "#abb5b5",
+            content4: "#8d9696", //skeleton sliding color
           },
         },
         dark: {
@@ -58,7 +58,7 @@ const config: Config = {
             content1: "#3a3c3f", // socials tooltip color
             content2: "#ffb720", // theme switcher hover color
             content3: "#abb5b5",
-            content4: "#abb5b5",
+            content4: "#abb5b5", //skeleton sliding color
           },
         },
       },

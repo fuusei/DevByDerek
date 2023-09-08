@@ -2,6 +2,8 @@ import { Landing } from "./components/Landing";
 import { About } from "./components/About";
 import { Experience } from "./components/Experience";
 import { Socials } from "./components/Socials";
+import { projects } from "@/utils/projectList";
+import { Projects } from "./components/Projects";
 
 export default function Home() {
   return (
@@ -10,6 +12,7 @@ export default function Home() {
       <Socials />
       <About />
       <Experience />
+      <Projects />
     </div>
   );
 }

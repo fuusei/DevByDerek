@@ -17,11 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      suppressHydrationWarning
-      dir="ltr"
-      lang="en"
-    >
+    <html suppressHydrationWarning dir="ltr" lang="en">
       <head />
       <body className={inter.className}>
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>

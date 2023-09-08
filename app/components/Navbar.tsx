@@ -11,7 +11,7 @@ export function Navbar() {
           <a
             key={i}
             href={link.path}
-            className="p-8 font-bold hover:text-focus hover:underline hover:decoration-double hover:underline-offset-8"
+            className="lg:p-8 p-3 font-bold hover:text-focus hover:underline hover:decoration-double hover:underline-offset-8"
           >
             <span>{link.name}</span>
           </a>
