@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Project } from "@/utils/projectList";
 import {
   Card,
@@ -24,26 +24,25 @@ export function ProjectCard(props: Project) {
         <Card
           isFooterBlurred
           radius="lg"
-          className="w-[400px] h-[280px] col-span-12 sm:col-span-7 hover:-translate-y-2"
+          className="w-[400px] h-full col-span-12 sm:col-span-7 hover:-translate-y-2"
         >
           <CardHeader className="absolute z-10 top-1 flex-col items-start">
-            <h4 className="font-medium text-xl">{title}</h4>
+            <h4 className="font-medium text-xl text-white">{title}</h4>
           </CardHeader>
           <Image
             isZoomed
-            removeWrapper
             alt="Website preview"
-            className="z-0 w-full h-full object-cover"
+            className="z-0 h-[240px] w-full object-cover overflow-hidden"
             src={image || "/technologyIcons/react.svg"}
           />
-          <CardFooter className="absolute bottom-0 z-10 border-t-1 light:bg-white border-default-600 dark:border-default-100">
+          <CardFooter className="absolute bg-white/80 dark:bg-black/80 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
             <div className="flex flex-grow gap-2 items-center">
               <Link
                 target="__blank"
                 href={gitLink}
                 className="lg:text-4xl text-3xl cursor-pointer hover:text-focus"
               >
-                {<BsGithub />}
+                <BsGithub />
               </Link>
               <p className="text-tiny">{desc}</p>
             </div>
