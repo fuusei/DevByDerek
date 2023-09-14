@@ -18,9 +18,9 @@ export function ProjectCard(props: Project) {
   const isSSR = useIsSSR();
   return (
     <div className="mr-5 my-4">
-      {isSSR ? (
+      {/* {isSSR ? (
         <SkeletonCard />
-      ) : (
+      ) : ( */}
         <Card
           isFooterBlurred
           radius="lg"
@@ -48,7 +48,7 @@ export function ProjectCard(props: Project) {
             </div>
           </CardFooter>
         </Card>
-      )}
+      {/* )} */}
     </div>
   );
 }

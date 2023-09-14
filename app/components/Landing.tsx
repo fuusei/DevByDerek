@@ -2,8 +2,11 @@
 import programmer from "@/public/programmer.json";
 import Lottie from "lottie-react";
 import { Typewriter } from "react-simple-typewriter";
+import { useRef } from "react";
+import useOnScreen from "./useOnScreen";
 
 export function Landing() {
+
   const quirks: string[] = [
     "front-end development💻.",
     "basketball🏀.",
@@ -28,7 +31,9 @@ export function Landing() {
       <div className="flex flex-col text-center lg:text-left">
         {/* welcome message */}
         <div>
-          <h2 className="lg:text-3xl text-lg font-semibold">Welcome, I am</h2>
+          <h2 className="lg:text-3xl text-lg font-semibold">
+            Welcome, I am
+          </h2>
           <h1 className="lg:text-6xl my-3 text-4xl font-bold tracking-widest text-primary-900 dark:text-primary-300">
             Derek Mackey
           </h1>

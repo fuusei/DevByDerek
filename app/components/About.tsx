@@ -1,7 +1,33 @@
-import { skills } from "@/utils/skillsList";
+"use client";
+import { FaArrowRightLong } from "react-icons/fa6";
+import useOnScreen from "./useOnScreen";
+import { motion } from "framer-motion";
+import {
+  fadeToRight,
+  aboutFadeToRight,
+  techFadeToRight,
+} from "./animations";
+import { Skills } from "./Skills";
 
 export function About() {
-  const proficientTech = ["TypeScript", "JavaScript", "React", "MongoDB", "Next.js"];
+  const { ref: aboutHeaderRef, controls: aboutHeaderControls } = useOnScreen();
+  const { ref: aboutContentRef, controls: aboutContentControls } = useOnScreen();
+  const { ref: techRef, controls: techControls } = useOnScreen();
+
+  const aboutContent = [
+    "I'm Derek, a full-stack developer who has mostly worked with MERN stack in my development career. I am based in South Florida and am actively looking for new job opportunities, preferably remote.",
+    "Recently, I have found that I enjoy front-end development and have been committed to creating minimalist, dynamic UI/UX that easily capture attention. Here are some technologies I've become proficient with lately:",
+  ];
+
+  const proficientTech = [
+    "TypeScript",
+    "JavaScript",
+    "React",
+    "Python",
+    "MongoDB",
+    "Next.js",
+  ];
+
   return (
     <section
       id="about"
@@ -11,55 +37,53 @@ export function About() {
       <div className="flex flex-col lg:flex-row">
         {/* about container */}
         <div className="flex-1 flex-col pb-20 lg:pr-16 pr-0">
-          <h1 className="font-bold pb-8 lg:text-5xl text-3xl underline decoration-solid decoration-2 underline-offset-8">
+          <motion.h1
+            className="font-bold pb-8 lg:text-5xl text-3xl underline decoration-solid decoration-2 underline-offset-8"
+            ref={aboutHeaderRef}
+            initial="hidden"
+            animate={aboutHeaderControls}
+            variants={fadeToRight}
+          >
             About
-          </h1>
-          <p className="pb-8 lg:text-xl md:text-lg">
-            I am a full-stack developer that has mostly worked with MERN
-            stack in my development career. 
-          </p>
-          <p className="lg:text-xl md:text-lg">
-            Et quia nihil est autem autem et ducimus impedit in necessitatibus
-            quod qui maiores voluptatem ea ipsa consequuntur. Ut rerum deleniti
-            sed Quis magni est voluptatibus reprehenderit. Et ipsum tenetur eum
-            tempora quia sit minus officiis est delectus dolores vel repellendus
-            aspernatur! Aut quam sint et reprehenderit voluptatum sed iure
-            soluta et ullam cupiditate.
-          </p>
-        </div>
-        {/* skills container */}
-        <div className="flex-1 flex-col lg:pl-6 pl-0 lg:text-left">
-          <h1 className="font-bold pb-8 lg:text-5xl text-3xl underline decoration-solid decoration-2 underline-offset-8">
-            Skills
-          </h1>
-          <div className="flex flex-col">
-            {skills.map((skill, i) => (
-              <div key={i} className="pb-6">
-                <h1 className="font-semibold text-2xl pb-3 flex justfy-start">
-                  {skill.category}
-                </h1>
-                <div className="flex flex-wrap">
-                  {skill.technologies.map((tech) => (
-                    <div
-                      key={tech.name}
-                      className="flex flex-row px-4 py-2 rounded-lg m-2 bg-content1 whitespace-nowrap hover:origin-top-left hover:rotate-1"
-                    >
-                      <h1>{tech.name}</h1>
-                      {tech.icon ? (
-                        <img
-                          src={tech.icon}
-                          width={20}
-                          height={20}
-                          className="ml-2"
-                        ></img>
-                      ) : null}
-                    </div>
-                  ))}
-                </div>
-              </div>
+          </motion.h1>
+          <div>
+            {aboutContent.map((paragraph, i) => (
+              <motion.p
+                key={i}
+                ref={aboutContentRef}
+                initial="hidden"
+                animate={aboutContentControls}
+                variants={aboutFadeToRight}
+                custom={i}
+                className="pb-8 lg:text-xl md:text-lg"
+              >
+                {paragraph}
+              </motion.p>
             ))}
+            <div className="flex flex-wrap">
+              {proficientTech.map((tech, i) => (
+                <motion.div
+                  key={i}
+                  className="flex flex-row items-center lg:w-[200px] w-[150px] py-5 pr-7"
+                  ref={techRef}
+                  initial="hidden"
+                  animate={techControls}
+                  variants={techFadeToRight}
+                  custom={i}
+                >
+                  <div className="w-6">
+                    <FaArrowRightLong />
+                  </div>
+                  <div className="lg:text-xl md:text-lg text-primary pl-4">
+                    {tech}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
+        {/* skills container */}
+        <Skills />
       </div>
     </section>
   );
