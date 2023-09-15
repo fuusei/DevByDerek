@@ -7,7 +7,7 @@ export default function useOnScreen(): {
 } {
   const ref = useRef(null);
   const controls = useAnimation();
-  const inView = useInView(ref, { once: true, margin: "-20%" });
+  const inView = useInView(ref, { once: true, margin: "-100px 0px" });
   useEffect(() => {
     if (inView) {
       controls.start("visible");

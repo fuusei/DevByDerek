@@ -2,11 +2,7 @@
 import { FaArrowRightLong } from "react-icons/fa6";
 import useOnScreen from "./useOnScreen";
 import { motion } from "framer-motion";
-import {
-  fadeToRight,
-  aboutFadeToRight,
-  techFadeToRight,
-} from "./animations";
+import { fadeToRight, aboutFadeToRight, techFadeToRight } from "./animations";
 import { Skills } from "./Skills";
 
 export function About() {
@@ -16,7 +12,7 @@ export function About() {
 
   const aboutContent = [
     "I'm Derek, a full-stack developer who has mostly worked with MERN stack in my development career. I am based in South Florida and am actively looking for new job opportunities, preferably remote.",
-    "Recently, I have found that I enjoy front-end development and have been committed to creating minimalist, dynamic UI/UX that easily capture attention. Here are some technologies I've become proficient with lately:",
+    "Recently, I have found that I enjoy front-end development and have been committed to creating minimalist, dynamic UI/UX that create meaningful digital experiences. Here are some technologies I've become proficient with lately:",
   ];
 
   const proficientTech = [

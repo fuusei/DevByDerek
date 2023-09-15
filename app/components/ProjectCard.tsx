@@ -3,13 +3,10 @@ import { Project } from "@/utils/projectList";
 import {
   Card,
   CardHeader,
-  CardBody,
   CardFooter,
   Image,
-  Button,
 } from "@nextui-org/react";
 import { useIsSSR } from "react-aria";
-import { SkeletonCard } from "./SkeletonCard";
 import { BsGithub } from "react-icons/bs";
 import Link from "next/link";
 
@@ -32,8 +29,8 @@ export function ProjectCard(props: Project) {
           <Image
             isZoomed
             alt="Website preview"
-            className="z-0 h-[240px] w-full object-cover overflow-hidden"
-            src={image || "/technologyIcons/react.svg"}
+            className="z-0 h-[250px] overflow-hidden"
+            src={image}
           />
           <CardFooter className="absolute bg-white/80 dark:bg-black/80 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
             <div className="flex flex-grow gap-2 items-center">

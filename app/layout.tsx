@@ -24,8 +24,9 @@ export default function RootLayout({
           <div className="relative flex flex-col" id="app-container">
             <Navbar />
             <main>{children}</main>
-            <footer className="bottom-0 text-center text-sm ">
+            <footer className="flex flex-col bottom-0 text-center text-sm ">
               <span>Created by Derek Mackey.</span>
+              <span>© 2023 All Rights Reserved</span>
             </footer>
           </div>
         </Providers>

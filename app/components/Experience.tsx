@@ -14,7 +14,7 @@ export function Experience() {
     >
       <div className="flex flex-col">
         <motion.h1
-          className="flex justify-start lg:justify-center font-bold pb-8 lg:text-5xl text-3xl underline decoration-solid decoration-2 underline-offset-8"
+          className="flex justify-start lg:justify-center font-bold lg:pb-16 pb-8 lg:text-5xl text-3xl underline decoration-solid decoration-2 underline-offset-8"
           ref={headerRef}
           initial="hidden"
           animate={headerControls}
@@ -31,28 +31,25 @@ export function Experience() {
               animate={contentControls}
               variants={staggerFadeIn}
               custom={index}
-              className="flex flex-row p-3 m-4 w-120 h-40 shadow-xl rounded-xl bg-content1"
+              className="flex flex-row py-3 m-4 lg:w-[440px] w-[350px] h-[140px] shadow-xl rounded-xl bg-content1"
             >
               <div className="flex items-center justify-center w-2/5">
-                <Image
-                  priority
+                <img
                   src={experience.image}
-                  width={85}
-                  height={85}
-                  className="rounded-xl"
+                  width={experience.width}
+                  height={experience.height}
+                  className="rounded-md h-auto"
                   alt={experience.company}
                 />
               </div>
-              <div className="flex flex-col justify-between p-4 w-3/5">
-                <div className="font-bold lg:text-base text-sm">
+              <div className="flex flex-col p-2 w-3/5">
+                <div className="font-bold lg:text-base text-sm mb-2">
                   {experience.company}
                 </div>
-                <div className="font-medium lg:text-base text-sm">
+                <div className="lg:text-base text-sm mb-2">
                   {experience.position}
                 </div>
-                <div className="font-thin lg:text-base text-sm">
-                  {experience.time}
-                </div>
+                <div className="lg:text-base text-sm">{experience.time}</div>
               </div>
             </motion.div>
           ))}

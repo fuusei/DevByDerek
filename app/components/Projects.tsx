@@ -14,7 +14,7 @@ export function Projects() {
     >
       <div className="flex flex-col justify-start">
         <motion.h1
-          className="flex justify-start lg:justify-center font-bold pb-14 lg:text-5xl text-3xl underline decoration-solid decoration-2 underline-offset-8"
+          className="flex justify-start lg:justify-center font-bold lg:pb-16 pb-8 lg:text-5xl text-3xl underline decoration-solid decoration-2 underline-offset-8"
           ref={headerRef}
           initial="hidden"
           animate={headerControls}
