@@ -9,6 +9,13 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Derek Mackey 🌬",
   description: "Personal Portfolio",
+  authors: [
+    {
+      name: "Derek",
+      url: "https://devbyderek.com",
+    },
+  ],
+  creator: "Derek"
 };
 
 export default function RootLayout({

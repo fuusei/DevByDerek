@@ -99,3 +99,17 @@ export const staggerFadeToLeft: Variants = {
     },
   }),
 };
+
+export const staggerFade: Variants = {
+  hidden: (i: any) => ({
+    opacity: 0,
+  }),
+  visible: (i: any) => ({
+    opacity: 1,
+    transition: {
+      duration: 1.3,
+      delay: i * 0.2, // stagger delay
+      ease: cubicBezier(0.645, 0.045, 0.355, 1),
+    },
+  }),
+};
