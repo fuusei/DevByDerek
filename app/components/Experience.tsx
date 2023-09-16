@@ -31,7 +31,7 @@ export function Experience() {
               animate={contentControls}
               variants={staggerFadeIn}
               custom={index}
-              className="flex flex-row py-3 m-4 lg:w-[440px] w-[350px] h-[140px] shadow-xl rounded-xl bg-content1"
+              className="flex flex-row py-3 mx-4 my-8 lg:w-[440px] w-[350px] h-[140px] shadow-xl rounded-xl bg-content1"
             >
               <div className="flex items-center justify-center w-2/5">
                 <img

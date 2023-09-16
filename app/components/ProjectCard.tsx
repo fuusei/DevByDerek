@@ -14,7 +14,7 @@ export function ProjectCard(props: Project) {
   const { title, desc, technologies, image, gitLink, url } = props;
   const isSSR = useIsSSR();
   return (
-    <div className="mr-5 my-4">
+    <div className="mr-5 my-6">
       {/* {isSSR ? (
         <SkeletonCard />
       ) : ( */}

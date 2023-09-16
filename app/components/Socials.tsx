@@ -14,7 +14,7 @@ export function Socials() {
           initial={{ scale: 0 }}
           animate={{ rotate: 360, scale: 1 }}
           transition={{
-            duration: 1.5,
+            delay: i * 0.3,
             type: "spring",
             stiffness: 260,
             damping: 20,
