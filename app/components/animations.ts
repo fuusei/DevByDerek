@@ -103,11 +103,13 @@ export const staggerFadeToLeft: Variants = {
 export const staggerFade: Variants = {
   hidden: (i: any) => ({
     opacity: 0,
+    y: -20,
   }),
   visible: (i: any) => ({
     opacity: 1,
+    y: 0,
     transition: {
-      duration: 1.3,
+      duration: 0.7,
       delay: i * 0.2, // stagger delay
       ease: cubicBezier(0.645, 0.045, 0.355, 1),
     },
