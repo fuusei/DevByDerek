@@ -1,7 +1,6 @@
 import { experiences } from "@/utils/experienceList";
 import useOnScreen from "./useOnScreen";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { fadeIn, staggerFadeIn } from "./animations";
 
 export function Experience() {
