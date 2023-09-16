@@ -18,14 +18,16 @@ export function Skills() {
       >
         Skills
       </motion.h1>
-      <div className="flex flex-col">
+      <motion.div
+        className="flex flex-col"
+        ref={contentRef}
+        initial="hidden"
+        animate={contentControls}
+      >
         {skills.map((skill, i) => (
           <motion.div
             key={i}
             className="pb-6"
-            ref={contentRef}
-            initial="hidden"
-            animate={contentControls}
             variants={staggerFadeToLeft}
             custom={i}
           >
@@ -52,7 +54,7 @@ export function Skills() {
             </div>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }

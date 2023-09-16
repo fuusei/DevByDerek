@@ -22,20 +22,18 @@ export function Projects() {
         >
           Projects
         </motion.h1>
-        <div className="flex flex-wrap justify-evenly">
+        <motion.div
+          className="flex flex-wrap justify-evenly"
+          ref={contentRef}
+          initial="hidden"
+          animate={contentControls}
+        >
           {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              ref={contentRef}
-              initial="hidden"
-              animate={contentControls}
-              variants={staggerFadeIn}
-              custom={index}
-            >
+            <motion.div key={index} variants={staggerFadeIn} custom={index}>
               <ProjectCard {...project} />
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

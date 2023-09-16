@@ -19,21 +19,18 @@ export function Landing() {
       id="landing"
       className="flex items-center w-full min-h-screen flex-col lg:flex-row justify-center lg:justify-between px-[10%]"
     >
-      <div>
+      <div className="lg:w-[600px] md:w-[500px] w-[400px]">
         <Lottie
           animationData={programmer}
           loop
           autoplay
-          style={{ height: 600, width: 600 }}
         />
       </div>
       {/* all text elements */}
       <div className="flex flex-col text-center lg:text-left">
         {/* welcome message */}
         <div>
-          <h2 className="lg:text-3xl text-lg font-semibold">
-            Welcome, I am
-          </h2>
+          <h2 className="lg:text-3xl text-lg font-semibold">Welcome, I am</h2>
           <h1 className="lg:text-6xl my-3 text-4xl font-bold tracking-widest text-primary-900 dark:text-primary-300">
             Derek Mackey
           </h1>

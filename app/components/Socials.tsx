@@ -24,7 +24,7 @@ export function Socials() {
             <Link
               target="__blank"
               href={link.path}
-              className="lg:text-4xl text-3xl cursor-pointer text-primary hover:text-focus"
+              className="lg:text-4xl text-2xl cursor-pointer text-primary hover:text-focus"
             >
               {link.icon}
             </Link>

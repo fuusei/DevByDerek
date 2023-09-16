@@ -21,13 +21,15 @@ export function Experience() {
         >
           Experience
         </motion.h1>
-        <div className="flex flex-wrap justify-evenly">
+        <motion.div
+          className="flex flex-wrap justify-evenly"
+          ref={contentRef}
+          initial="hidden"
+          animate={contentControls}
+        >
           {experiences.map((experience, index) => (
             <motion.div
               key={index}
-              ref={contentRef}
-              initial="hidden"
-              animate={contentControls}
               variants={staggerFadeIn}
               custom={index}
               className="flex flex-row py-3 mx-4 my-8 lg:w-[440px] w-[350px] h-[140px] shadow-xl rounded-xl bg-content1"
@@ -52,7 +54,7 @@ export function Experience() {
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

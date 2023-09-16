@@ -42,13 +42,14 @@ export function About() {
           >
             About
           </motion.h1>
-          <div>
+          <motion.div
+            ref={aboutContentRef}
+            initial="hidden"
+            animate={aboutContentControls}
+          >
             {aboutContent.map((paragraph, i) => (
               <motion.p
                 key={i}
-                ref={aboutContentRef}
-                initial="hidden"
-                animate={aboutContentControls}
                 variants={aboutFadeToRight}
                 custom={i}
                 className="pb-8 lg:text-xl md:text-lg"
@@ -56,14 +57,16 @@ export function About() {
                 {paragraph}
               </motion.p>
             ))}
-            <div className="flex flex-wrap">
+            <motion.div
+              className="flex flex-wrap"
+              ref={techRef}
+              initial="hidden"
+              animate={techControls}
+            >
               {proficientTech.map((tech, i) => (
                 <motion.div
                   key={i}
                   className="flex flex-row items-center lg:w-[200px] w-[150px] py-5 pr-7"
-                  ref={techRef}
-                  initial="hidden"
-                  animate={techControls}
                   variants={techFadeToRight}
                   custom={i}
                 >
@@ -75,8 +78,8 @@ export function About() {
                   </div>
                 </motion.div>
               ))}
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
         {/* skills container */}
         <Skills />
