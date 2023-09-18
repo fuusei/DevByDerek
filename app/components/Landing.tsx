@@ -2,8 +2,6 @@
 import programmer from "@/public/programmer.json";
 import Lottie from "lottie-react";
 import { Typewriter } from "react-simple-typewriter";
-import { useRef } from "react";
-import useOnScreen from "./useOnScreen";
 
 export function Landing() {
 

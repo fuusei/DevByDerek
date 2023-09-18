@@ -5,47 +5,78 @@ import {
   CardHeader,
   CardFooter,
   Image,
+  Tooltip,
+  Button,
 } from "@nextui-org/react";
-import { useIsSSR } from "react-aria";
-import { BsGithub } from "react-icons/bs";
+import { BsGithub, BsThreeDotsVertical } from "react-icons/bs";
+import { HiComputerDesktop } from "react-icons/hi2";
+import { BiDotsVerticalRounded } from "react-icons/bi";
 import Link from "next/link";
 
 export function ProjectCard(props: Project) {
   const { title, desc, technologies, image, gitLink, url } = props;
-  const isSSR = useIsSSR();
   return (
     <div className="mr-5 my-6">
-      {/* {isSSR ? (
-        <SkeletonCard />
-      ) : ( */}
-        <Card
-          isFooterBlurred
-          radius="lg"
-          className="w-[400px] h-full col-span-12 sm:col-span-7 hover:-translate-y-2"
-        >
-          <CardHeader className="absolute z-10 top-1 flex-col items-start">
-            <h4 className="font-medium text-xl text-white">{title}</h4>
-          </CardHeader>
-          <Image
-            isZoomed
-            alt="Website preview"
-            className="z-0 h-[250px] overflow-hidden"
-            src={image}
-          />
-          <CardFooter className="absolute bg-white/80 dark:bg-black/80 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
-            <div className="flex flex-grow gap-2 items-center">
+      <Card
+        isFooterBlurred
+        radius="lg"
+        className="w-[400px] h-full col-span-12 sm:col-span-7 hover:-translate-y-2"
+      >
+        <CardHeader className="absolute z-10 top-1 items-center justify-between">
+          <h4 className="font-medium text-xl text-white">{title}</h4>
+          <Tooltip
+            placement="bottom-end"
+            content={
+              <div className="flex flex-col">
+                {technologies.map((tech, i) => (
+                  <div className="flex flex-row" key={i}>
+                    <div className="text-tiny">{tech.name}</div>
+                    {tech.icon ? (
+                      <img
+                        src={tech.icon}
+                        width={14}
+                        height={14}
+                        className="ml-1"
+                      />
+                    ) : null}
+                  </div>
+                ))}
+              </div>
+            }
+          >
+            <Button isIconOnly size="sm" className="rounded-full">
+              <BsThreeDotsVertical />
+            </Button>
+          </Tooltip>
+        </CardHeader>
+        <Image
+          isZoomed
+          alt="Website preview"
+          className="z-0 h-[250px] overflow-hidden"
+          src={image}
+        />
+        <CardFooter className="absolute bg-white/80 dark:bg-black/80 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
+          <div className="flex flex-grow gap-2 items-center">
+            <Link
+              target="__blank"
+              href={gitLink}
+              className="lg:text-3xl text-2xl cursor-pointer hover:text-focus"
+            >
+              <BsGithub />
+            </Link>
+            {url ? (
               <Link
                 target="__blank"
-                href={gitLink}
-                className="lg:text-4xl text-3xl cursor-pointer hover:text-focus"
+                href={url}
+                className="lg:text-3xl text-2xl cursor-pointer hover:text-focus"
               >
-                <BsGithub />
+                <HiComputerDesktop />
               </Link>
-              <p className="text-tiny">{desc}</p>
-            </div>
-          </CardFooter>
-        </Card>
-      {/* )} */}
+            ) : null}
+            <p className="text-tiny">{desc}</p>
+          </div>
+        </CardFooter>
+      </Card>
     </div>
   );
 }

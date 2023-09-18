@@ -47,7 +47,7 @@ export function Skills() {
                       width={20}
                       height={20}
                       className="ml-2"
-                    ></img>
+                    />
                   ) : null}
                 </div>
               ))}

@@ -30,10 +30,10 @@ export const projects: Project[] = [
     desc: "Created to always know which songs in my playlists have been deleted since YouTube will just say your videos have been deleted.",
     technologies: [
       { name: "Python", icon: "/technologyIcons/python.svg" },
-      { name: "Flask", icon: "/technologyIcons/flask.svg" },
       { name: "JavaScript", icon: "/technologyIcons/javascript.svg" },
       { name: "React", icon: "/technologyIcons/react.svg" },
       { name: "Material UI", icon: "/technologyIcons/material.svg" },
+      { name: "Flask" },
     ],
     image: "/projectImages/tracker.png",
     gitLink: "https://github.com/fuusei/Youtube-Playlist-Tracker",
@@ -48,8 +48,8 @@ export const projects: Project[] = [
     ],
     image: "/projectImages/linktree.png",
     gitLink: "https://github.com/fuusei/LinkTreeClone",
+    url: "https://linktreeclone-silk.vercel.app/",
   },
-
   {
     title: "iiKanji (Coming soon..)",
     desc: "Making this as a tool to study kanji that implements a feature missing from Quizlet.",
