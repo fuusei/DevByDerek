@@ -17,7 +17,7 @@ export function Navbar() {
             animate="visible"
             variants={staggerFade}
             custom={i}
-            className="lg:p-8 md:p-3 sm:p-2 lg:text-base md:text-base text-sm font-bold hover:text-focus hover:underline hover:decoration-double hover:underline-offset-8"
+            className="lg:p-8 md:p-3 sm:p-2 text-base font-bold hover:text-focus hover:underline hover:decoration-double hover:underline-offset-8"
           >
             <span>{link.name}</span>
           </motion.a>
