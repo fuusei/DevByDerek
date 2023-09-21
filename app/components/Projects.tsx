@@ -10,11 +10,11 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className="flex items-center w-full min-h-screen px-[8%] pb-[3%]"
+      className="flex items-center w-full min-h-screen pl-[10%] pr-[8%] pb-[3%]"
     >
       <div className="flex flex-col justify-start">
         <motion.h1
-          className="flex justify-start lg:justify-center font-bold lg:pb-16 pb-8 lg:text-5xl text-3xl underline decoration-solid decoration-2 underline-offset-8"
+          className="flex justify-start lg:justify-center font-bold pt-4 lg:pb-16 pb-8 lg:text-5xl text-3xl underline decoration-solid decoration-2 underline-offset-8"
           ref={headerRef}
           initial="hidden"
           animate={headerControls}

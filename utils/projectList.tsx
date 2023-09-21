@@ -57,6 +57,7 @@ export const projects: Project[] = [
       { name: "Next.js", icon: "/technologyIcons/next.svg" },
       { name: "TypeScript", icon: "/technologyIcons/typescript.svg" },
       { name: "TailwindCSS", icon: "/technologyIcons/tailwind.svg" },
+      { name: "MongoDB", icon: "/technologyIcons/mongo.svg" },
       { name: "Next UI" },
     ],
     image: "/projectImages/tsuzuku.jpg",
