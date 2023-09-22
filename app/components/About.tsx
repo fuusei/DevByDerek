@@ -27,12 +27,12 @@ export function About() {
   return (
     <section
       id="about"
-      className="flex items-center w-full min-h-screen justify-center lg:justify-between px-[10%]"
+      className="w-full min-h-screen flex items-center justify-center lg:justify-between px-[10%]"
     >
       {/* about skills container */}
       <div className="flex flex-col lg:flex-row">
         {/* about container */}
-        <div className="flex-1 flex-col pb-20 lg:pr-16 pr-0">
+        <div className="flex-1 flex-col pb-20 lg:pr-16 lg:pt-0 pt-16 pr-0">
           <motion.h1
             className="font-bold pb-8 lg:text-5xl text-3xl underline decoration-solid decoration-2 underline-offset-8"
             ref={aboutHeaderRef}

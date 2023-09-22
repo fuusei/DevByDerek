@@ -15,7 +15,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: "My Personal Website",
-    desc: "I created this since it is becoming more popular to have a portfolio website among developers.",
+    desc: "Created to have a central location to put all my experience.",
     technologies: [
       { name: "Next.js", icon: "/technologyIcons/next.svg" },
       { name: "TypeScript", icon: "/technologyIcons/typescript.svg" },
@@ -27,7 +27,7 @@ export const projects: Project[] = [
   },
   {
     title: "YouTube Playlist Tracker",
-    desc: "Created to always know which songs in my playlists have been deleted since YouTube will just say your videos have been deleted.",
+    desc: "Tracks your playlists and alerts which have been deleted.",
     technologies: [
       { name: "Python", icon: "/technologyIcons/python.svg" },
       { name: "JavaScript", icon: "/technologyIcons/javascript.svg" },
@@ -40,7 +40,7 @@ export const projects: Project[] = [
   },
   {
     title: "LinkTreeClone",
-    desc: "Made this before my website to have my links in one spot and so I could get familiar with Next.js and TailwindCSS.",
+    desc: "Recreated LinkTree to get experience with TailwindCSS and Next.js",
     technologies: [
       { name: "Next.js", icon: "/technologyIcons/next.svg" },
       { name: "TypeScript", icon: "/technologyIcons/typescript.svg" },
@@ -60,7 +60,7 @@ export const projects: Project[] = [
       { name: "MongoDB", icon: "/technologyIcons/mongo.svg" },
       { name: "Next UI" },
     ],
-    image: "/projectImages/tsuzuku.jpg",
+    image: "/projectImages/tsuzuku.png",
     gitLink: "https://github.com/fuusei/iiKanji",
   },
 ];

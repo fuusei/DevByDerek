@@ -17,7 +17,7 @@ export function Landing() {
       id="landing"
       className="flex items-center w-full min-h-screen flex-col lg:flex-row justify-center lg:justify-between px-[10%]"
     >
-      <div className="lg:w-[600px] md:w-[500px] w-[400px]">
+      <div className="lg:w-[600px] md:w-[500px] w-[390px]">
         <Lottie
           animationData={programmer}
           loop

@@ -15,7 +15,9 @@ export const metadata: Metadata = {
       url: "https://devbyderek.com",
     },
   ],
-  creator: "Derek"
+  creator: "Derek",
+  viewport:
+    "viewport-fit=cover, width=device-width, initial-scale=1.0, maximum-scale=1.0",
 };
 
 export default function RootLayout({
