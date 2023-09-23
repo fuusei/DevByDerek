@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export function Socials() {
   return (
-    <div className="fixed inset-y-[75%] lg:ml-6 ml-2">
+    <div className="fixed bottom-[5%] lg:ml-6 ml-2">
       {socialLinks.map((link, i) => (
         <motion.div
           className="py-1 hover:-translate-y-1 hover:scale-125"
@@ -14,7 +14,7 @@ export function Socials() {
           initial={{ scale: 0 }}
           animate={{ rotate: 360, scale: 1 }}
           transition={{
-            delay: (i * 0.3) + 1.5,
+            delay: i * 0.3 + 1.5,
             type: "spring",
             stiffness: 260,
             damping: 20,
