@@ -24,7 +24,7 @@ export function Projects() {
             Projects
           </motion.h1>
           <motion.div
-            className="flex flex-wrap justify-center"
+            className="flex flex-wrap lg:justify-evenly justify-center"
             ref={contentRef}
             initial="hidden"
             animate={contentControls}
