@@ -17,7 +17,7 @@ const config: Config = {
       themes: {
         light: {
           colors: {
-            background: "#EDF3EC",
+            background: "#d7e0c8",
             primary: {
               50: "#f6faf3",
               100: "#e9f5e3",
@@ -29,7 +29,7 @@ const config: Config = {
               700: "#3d692c",
               800: "#345427",
               900: "#13250e",
-              DEFAULT: "#506546",
+              DEFAULT: "#405935",
             },
             focus: "#34264f", // purple navbar links hover
             content1: "#ced1d3", // socials tooltip color
@@ -40,7 +40,7 @@ const config: Config = {
         },
         dark: {
           colors: {
-            background: "#020f01",
+            background: "#020f04",
             primary: {
               50: "#f6faf3",
               100: "#e9f5e3",

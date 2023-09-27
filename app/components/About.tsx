@@ -73,7 +73,7 @@ export function About() {
                   <div className="w-6">
                     <FaArrowRightLong />
                   </div>
-                  <div className="lg:text-xl md:text-lg text-primary pl-4">
+                  <div className="lg:text-xl md:text-lg text-primary font-bold pl-4">
                     {tech}
                   </div>
                 </motion.div>
