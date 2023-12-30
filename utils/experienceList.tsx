@@ -9,6 +9,14 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
+    company: "red violet",
+    position: "QA Automation Engineer",
+    time: "Dec '22 - Present",
+    image: "/redviolet.jpg",
+    width: 150,
+    height: 110,
+  },
+  {
     company: "Accelya Group",
     position: "Software Engineer",
     time: "Jul '21 - Dec '22",
